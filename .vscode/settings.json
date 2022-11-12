@@ -1,0 +1,8 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#38254B",
+        "titleBar.activeBackground": "#4F3469",
+        "titleBar.activeForeground": "#FCFAFD"
+    },
+    "livePreview.defaultPreviewPath": "/src/app/view-products/addproduct/addproduct.component.html"
+}

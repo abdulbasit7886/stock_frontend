@@ -1,0 +1,30 @@
+<div class="modal-header" style="justify-content: center">
+  <h4 class="modal-title" id="modal-title">Profile deletion</h4>
+</div>
+<div class="modal-body" style="text-align: center">
+  <p>
+    <strong
+      >Are you sure you want to delete? <span class="text-primary"></span
+    ></strong>
+  </p>
+  <!-- <p>
+    All information associated to this user profile will be permanently deleted.
+    <span class="text-danger">This operation can not be undone.</span>
+  </p> -->
+</div>
+<div class="modal-footer" style="justify-content: center">
+  <button
+    type="button"
+    class="btn btn-outline-secondary cancel"
+    (click)="dialogRef.close(false)"
+  >
+    Cancel
+  </button>
+  <button
+    type="button"
+    class="btn btn-danger ok"
+    (click)="dialogRef.close(true)"
+  >
+    Delete
+  </button>
+</div>

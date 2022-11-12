@@ -1,0 +1,26 @@
+<h3>
+    Low & High of 
+    <small class="text-muted">{{name}}</small>
+  </h3>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Low</th>
+        <th scope="col">High</th>
+        <th scope="col">Date</th>
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of data let x = index">
+<tr>      <th scope="row">{{x}}</th>
+
+    <td>
+{{name}}
+</td>
+<td>{{i.Low}}</td>
+<td>{{i.High}}</td><td>{{i.Date}}</td></tr>
+    </tbody>
+  </table>

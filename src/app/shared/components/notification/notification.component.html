@@ -1,0 +1,87 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" (click)="test=0">
+  <mat-icon style="color: black;"  [matBadge]="test" [matBadgeHidden]="test<=0" matBadgeSize="medium" >notifications</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <div class="container" >
+    <h3 class="m-b-50 heading-line">Notifications <i class="fa fa-bell text-muted"></i></h3>
+
+    <div class="notification-ui_dd-content" *ngFor='let i of notify' (click)="status(i._id)" [routerLink]="[i.Title,i.product_id]">
+      <div class="notification-list notification-list--unread" [ngStyle]="{'background-color': count == true ? '#90b2e8' : 'white'}" >
+        <div class="notification-list_content">
+          <div class="notification-list_detail" >
+            <p><b>{{i.Title}}</b></p>
+            <p class="text-muted">{{i.Description}}</p>
+            <p class="text-muted"><small>{{i.Date}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-dark" (click)="allnotification()">Mark All as Read</button>
+    </div>
+  </div>
+
+</mat-menu>
+
+
+
+<!-- 
+
+<button mat-icon-button [matMenuTriggerFor]="menu" (click)="test=0">
+    <mat-icon style="color: black;"  [matBadge]="test" [matBadgeHidden]="test<=0" matBadgeSize="medium" >notifications</mat-icon>
+  
+  </button>
+  <mat-menu #menu="matMenu" >
+    <div class="scrollbar scrollbar-primary">
+      <div class="force-overflow">
+    <div class="list-group" *ngFor="let i of notify" (click)="status(i._id)" >
+        <div class="alerts read">
+            <div class="user alert" [routerLink]="[i.Title,i.product_id]">
+               <!-- <img src="./assets/images/profile.avif" alt="" />  
+              <h3>Title{{ i.Title }}</h3>
+            </div>
+            <p>Description{{ i.Description }}</p>
+          </div>
+        </div>
+  
+        <div class="marked">
+          <button class="m-btn" (click)="allnotification()">
+            mark all as read
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- <button (click)="allnotification()">Mark all as read</button> 
+  
+  </mat-menu>
+  
+ -->
+
+
+<!-- <div class="dropdowns-stuff">
+  <div class="notify"(click)="count = !count" [matBadge]="test"[matBadgeHidden]="test <= 0" matBadgeSize="medium">
+    <i class="fas fa-bell"></i>
+    <div class="notification" [ngClass]="count ? 'visibler' : ''">
+      <div class="color">
+        <span><span class="span">no</span>tifications</span>
+      </div>
+      <div *ngFor="let i of notify">
+        <div class="alerts read">
+          <div class="user alert">
+             <img src="./assets/images/profile.avif" alt="" /> 
+            <h3>Item</h3>
+
+            <h3>{{ i.Title }}</h3>
+          </div>
+          <p>{{ i.Description }}</p>
+        </div>
+      </div>
+
+      <div class="marked">
+        <button class="m-btn" (click)="allnotification()">
+          mark all as read
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

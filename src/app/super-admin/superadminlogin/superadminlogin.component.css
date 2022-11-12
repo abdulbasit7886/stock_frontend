@@ -1,0 +1,115 @@
+/* *{
+  box-sizing: border-box;
+}
+.jumbotron{
+   justify-content: center;
+} */
+
+/* *{
+  background-color: wheat;
+} */
+.main{
+  width: 100VW;
+}
+.fa-door-open{
+  font-size: 50px;
+  color: #181c32;
+}
+.cntr{
+     
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+       height: 100vh;
+       align-items: center;
+       width: 100%;
+    }
+    form h1{
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 46px;
+      line-height: 44px;
+      margin-bottom: 13px;
+      font-weight: 800;
+      color: #393945;
+    }
+    form h1 span{
+      background: linear-gradient(to right, #12CE5D 10%, #189EFF 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .para {
+        width: 420px;
+        margin-left: 15px;
+        /* background-color: #4267B2; */
+        
+    }
+    .para p{
+      font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+        color: #181c32;
+    }
+    .lgn{
+      display: block;
+      background-color: 	#393945;
+      border: none;
+      width:100%;
+     height: 52px;
+      border-radius:4px ;
+      color: white;
+      text-transform: capitalize;
+      font-size: 16px;
+      margin: 10px 0;
+      transition: all .4s linear;
+    }
+    .lgn:hover{
+      background-color: transparent;
+      border: 2.5px solid #393945;
+      color: #393945;
+    }
+    .lg-f{
+      width:100%;
+      height: 46px;
+      border: 1px solid #e2e2e2;
+      margin: 15px 0;
+      background-color: #fafafa;
+      padding: 13px 10px;
+      border-radius: 2px;
+      padding: 0 20px;
+    }
+    .lg-f::placeholder{
+      text-transform: capitalize;
+      color: rgba(0,0,0,0.5);
+      font-size: 13px;
+    }
+    .lg-f:focus{
+      box-shadow: none;
+    }
+    form{
+    width: auto;
+    
+    }
+    
+    @media (max-width:576px) , (max-width:390px){
+      
+      .para p{
+        display: none;
+      }
+      form{
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .text p{
+        font-size: 12px;
+        white-space: nowrap;
+      }
+      .lgn{
+        width: 84%;
+      }
+    }
+
+

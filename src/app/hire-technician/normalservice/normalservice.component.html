@@ -1,0 +1,71 @@
+
+
+<div class="supplierlist-box" >
+    <h5>Stock list</h5>
+    <div class="box-top">
+      <div class="top-center"></div>
+      <div class="top-right">
+        <span>search:</span>
+        <input
+          type="search"
+          class="fld"
+          [(ngModel)]="term"
+          class="searchTerm"
+        />
+      </div>
+    </div>
+    <div class="box-bottom">
+      <table style="width: 100%">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Stock Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody
+  
+          *ngFor="
+            let i of data
+              | paginate
+                : {
+                    itemsPerPage: tableSize,
+                    currentPage: page,
+                    totalItems: count
+                  }
+              | filter: term;
+            let x = index
+          "
+        >
+          <tr>
+            <td>
+{{x}}
+            </td>
+            <td>{{ i.Name}} </td>
+
+            <!-- <td>{{ i.category.category }}</td> -->
+            <!-- <td [ngStyle]="{ color: i.quantity > 10 ? 'black' : 'red' }">
+              {{ i.quantity }}
+            </td> -->
+  
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="box-footer">
+      <!-- <span style="font-size: 12px">showing 1 to 1 of 1 entries</span> -->
+      <div class="pagination">
+        <nav aria-label="Page navigation example">
+          <pagination-controls
+            previousLabel="Prev"
+            nextLabel="Next"
+            (pageChange)="onTableDataChange($event)"
+          >
+          </pagination-controls>
+        </nav>
+      </div>
+    </div>
+  </div>
+  

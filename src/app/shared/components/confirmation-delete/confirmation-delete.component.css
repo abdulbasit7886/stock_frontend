@@ -1,0 +1,17 @@
+.cancel {
+  margin-right: 10px;
+  width: 80px;
+  height: 40px;
+}
+
+.ok {
+  height: 40px;
+  width: 80px;
+  margin-left: 10px;
+}
+
+.cancel:focus,
+.ok:focus {
+  border: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,22 @@
+.main {
+  width: 100%;
+}
+.inner {
+  display: flex;
+}
+.inner .left {
+  /* width: 20%; */
+  height: 100vh;
+  position: sticky;
+  background-color: #1e1e2d !important;
+  top: 0;
+  /* bottom: 0; */
+  z-index: 4;
+}
+/* .inner .left .left-inner{
+ 
+ } */
+.inner .right {
+  /* width: auto; */
+  flex: 1;
+}

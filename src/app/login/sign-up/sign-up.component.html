@@ -1,0 +1,420 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 side">
+      <div class="view">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="main1">
+                <div class="image">
+                  <img
+                    src="/../assets/images/first.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="text">
+                  <h3>Create your <span class="sp">Account</span></h3>
+                  <p>
+                    Establish an online presence for your brick
+                    <br />
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="main1">
+                <div class="image">
+                  <img
+                    src="/../assets/images/second.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="text">
+                  <h3>
+                    <span class="sp">stock</span> Exchange Data Analy<span
+                      class="sp"
+                      >sis</span
+                    >
+                  </h3>
+                  <p>
+                    Get access to more than 650,000 Stock exchange Data
+                  </p>
+                  <p><span class="sp">1,000+</span> verified Business.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="main1">
+                <div class="image">
+                  <img
+                    src="/../assets/images/third.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="text">
+                  <h3>
+                    real Data from <span class="sp">real</span> stocks
+                  </h3>
+                  <p>
+                    With P<span class="sp">O</span>S’s Group Pricing feature,
+                    long term clients get the
+                  </p>
+                  <p>
+                    usu<span class="sp">al</span> price while new customers
+                    receive a different price.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <!-- <span class="visually-hidden">Previous</span> -->
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <!-- <span class="visually-hidden">Next</span> -->
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 cntr">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="f-w">
+          <div class="log">
+            <h4><span class="sp">STOCK </span>Exchange</h4>
+          </div>
+        </div>
+        <h1>create a A<span class="sp">cco</span>unt</h1>
+        <p>
+          Please fill this f<span class="sp">o</span>rm to create a account
+          <span class="sp">.</span>
+        </p>
+        <div class="m-flex">
+          <div class="mb-3 form-group">
+            <input
+              pattern="^[a-zA-Z]+(\s+[a-zA-Z]+)*$"
+              type="text"
+              formControlName="firstName"
+              class="form-control lg-f indexEach"
+              id="formGroupExampleInput"
+              placeholder="first name"
+              [ngClass]="{
+                'is-invalid': isFormSubmited && errors['firstName'].errors
+              }"
+            />
+            <span
+              style="color: red"
+              class="help-block"
+              *ngIf="
+                (isFormSubmited && errors['firstName'].invalid) ||
+                errors['firstName'].touched ||
+                errors['firstName'].dirty
+              "
+            >
+              <span
+                *ngIf=" errors['firstName'].errors?.['required'] &&  !errors['firstName'].errors?.['pattern'] &&  !errors['firstName'].errors?.['minlength'] &&  !errors['firstName'].errors?.['maxlength']"
+              >
+                *Please enter your First Name
+              </span>
+
+              <span
+                *ngIf="errors['firstName'].errors?.['minlength'] && !errors['firstName'].errors?.['pattern'] &&  !errors['firstName'].errors?.['maxlength']"
+              >
+                *minimum 4 characters
+              </span>
+
+              <span
+                *ngIf="errors['firstName'].errors?.['maxlength'] && !errors['firstName'].errors?.['minlength'] &&  !errors['firstName'].errors?.['pattern']"
+              >
+                *maximum 30 characters allowed
+              </span>
+
+              <span
+                *ngIf=" errors['firstName'].errors?.['pattern'] && !errors['firstName'].errors?.['maxlength'] && !errors['firstName'].errors?.['minlength']"
+              >
+                *enter valid name
+              </span>
+            </span>
+          </div>
+
+          <div class="mb-3 form-group">
+            <input
+              pattern="^[a-zA-Z]+(\s+[a-zA-Z]+)*$"
+              type="text"
+              formControlName="lastName"
+              class="form-control lg-f indexEach"
+              id="formGroupExampleInput"
+              placeholder="last name"
+              [ngClass]="{
+                'is-invalid': isFormSubmited && errors['lastName'].errors
+              }"
+            />
+            <span
+              style="color: red"
+              class="help-block"
+              *ngIf="
+                (isFormSubmited && errors['lastName'].invalid) ||
+                errors['lastName'].touched ||
+                errors['lastName'].dirty
+              "
+            >
+              <span
+                *ngIf=" errors['lastName'].errors?.['required'] &&  !errors['lastName'].errors?.['pattern'] &&  !errors['lastName'].errors?.['minlength'] &&  !errors['lastName'].errors?.['maxlength']"
+              >
+                *Please enter your First Name
+              </span>
+
+              <span
+                *ngIf="errors['lastName'].errors?.['minlength'] &&  !errors['lastName'].errors?.['pattern'] &&  !errors['lastName'].errors?.['maxlength']"
+              >
+                *minimum 4 characters
+              </span>
+
+              <span
+                *ngIf="errors['lastName'].errors?.['maxlength'] && !errors['lastName'].errors?.['minlength'] && !errors['lastName'].errors?.['pattern']"
+              >
+                *maximum 30 characters allowed
+              </span>
+
+              <span
+                *ngIf=" errors['lastName'].errors?.['pattern'] && !errors['lastName'].errors?.['maxlength'] && !errors['lastName'].errors?.['minlength']"
+              >
+                *enter valid name
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="mb-3 form-group">
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control lg-f"
+            id="formGroupExampleInput"
+            placeholder="email"
+            [ngClass]="{
+              'is-invalid': isFormSubmited && errors['email'].errors
+            }"
+          />
+          <span
+            style="color: red"
+            class="help-block"
+            *ngIf="
+              (isFormSubmited && errors['email'].invalid) ||
+              errors['email'].touched ||
+              errors['email'].dirty
+            "
+          >
+            <span
+              *ngIf=" errors['email'].errors?.['required'] &&  !errors['email'].errors?.['pattern'] &&  !errors['email'].errors?.['minlength'] &&  !errors['email'].errors?.['maxlength']"
+            >
+              *Please enter your First Name
+            </span>
+
+            <span
+              *ngIf="errors['email'].errors?.['maxlength'] && !errors['email'].errors?.['minlength'] &&  !errors['email'].errors?.['pattern']"
+            >
+              *maximum 30 characters allowed
+            </span>
+
+            <span
+              *ngIf=" errors['email'].errors?.['email'] && !errors['email'].errors?.['maxlength'] && !errors['email'].errors?.['minlength']"
+            >
+              *enter valid email
+            </span>
+          </span>
+        </div>
+
+        <div class="mb-3 form-group">
+          <input
+            minlength="11"
+            maxlength="12"
+            type="text"
+            formControlName="phoneNumber"
+            class="form-control lg-f"
+            id="formGroupExampleInput"
+            placeholder="Phone Number"
+            [ngClass]="{
+              'is-invalid': isFormSubmited && errors['phoneNumber'].errors
+            }"
+          />
+          <span
+            style="color: red"
+            class="help-block"
+            *ngIf="
+              (isFormSubmited && errors['phoneNumber'].invalid) ||
+              errors['phoneNumber'].touched ||
+              errors['phoneNumber'].dirty
+            "
+          >
+            <span
+              *ngIf=" errors['phoneNumber'].errors?.['required'] &&  !errors['phoneNumber'].errors?.['pattern'] &&  !errors['phoneNumber'].errors?.['minlength'] &&  !errors['phoneNumber'].errors?.['maxlength']"
+            >
+              *Please enter your contact
+            </span>
+
+            <span
+              *ngIf="errors['phoneNumber'].errors?.['minlength'] && !errors['phoneNumber'].errors?.['pattern'] &&  !errors['phoneNumber'].errors?.['maxlength'] && !errors['phoneNumber'].errors?.['noSpaceAllowed']"
+            >
+              *minimum 11 characters
+            </span>
+
+            <span
+              *ngIf="errors['phoneNumber'].errors?.['maxlength'] && !errors['phoneNumber'].errors?.['minlength'] &&  !errors['phoneNumber'].errors?.['pattern']"
+            >
+              *maximum 11 characters allowed
+            </span>
+
+            <span
+              *ngIf=" errors['phoneNumber'].errors?.['pattern'] && !errors['phoneNumber'].errors?.['noSpaceAllowed'] "
+            >
+              *only numbers allowed
+            </span>
+
+            <span *ngIf=" errors['phoneNumber'].errors?.['noSpaceAllowed']  ">
+              *enter valid number
+            </span>
+          </span>
+        </div>
+
+        <div class="mb-3 form-group">
+          <input
+            minlength="8"
+            maxlength="25"
+            type="password"
+            formControlName="password"
+            class="form-control lg-f"
+            id="formGroupExampleInput"
+            placeholder="Password"
+            [ngClass]="{
+              'is-invalid': isFormSubmited && errors['password'].errors
+            }"
+          />
+          <span
+            style="color: red"
+            class="help-block"
+            *ngIf="
+              (isFormSubmited && errors['password'].invalid) ||
+              errors['password'].touched ||
+              errors['password'].dirty
+            "
+          >
+            <span
+              *ngIf=" errors['password'].errors?.['required'] &&  !errors['password'].errors?.['pattern'] &&  !errors['password'].errors?.['minlength'] &&  !errors['password'].errors?.['maxlength']  && !errors['password'].errors?.['noSpaceAllowed']"
+            >
+              *Please enter your password
+            </span>
+
+            <span
+              *ngIf=" errors['password'].errors?.['pattern'] && !errors['password'].errors?.['noSpaceAllowed'] && !errors['password'].errors?.['required']"
+            >
+              * Password should have minimum 8 characters, at least 1 uppercase
+              letter, 1 lowercase
+            </span>
+
+            <span *ngIf=" errors['password'].errors?.['noSpaceAllowed']">
+              *space not allowed
+            </span>
+
+            <span
+              *ngIf="errors['password'].errors?.['maxlength'] && !errors['password'].errors?.['noSpaceAllowed'] && !errors['password'].errors?.['pattern']"
+            >
+              *maximum 25 characters allowed
+            </span>
+          </span>
+        </div>
+
+
+
+        <div class="mb-3 form-group">
+          <input
+            maxlength="25"
+            type="password"
+            formControlName="confirmPassword"
+            class="form-control lg-f"
+            id="formGroupExampleInput"
+            placeholder="Confirm Password"
+            [ngClass]="{
+              'is-invalid': isFormSubmited && errors['confirmPassword'].errors
+            }"
+          />
+          <span
+            style="color: red"
+            class="help-block"
+            *ngIf="
+              (isFormSubmited && errors['confirmPassword'].invalid) ||
+              errors['confirmPassword'].touched ||
+              errors['confirmPassword'].dirty
+            "
+          >
+            <span *ngIf=" errors['confirmPassword'].errors?.['required']">
+              *Please enter password again
+            </span>
+            <span *ngIf=" errors['confirmPassword'].errors?.['mustMatch']">
+              *Confrim password exact match with password
+            </span>
+          </span>
+        </div>
+        
+
+        <div class="mb-3 form-group">
+          <select formControlName="country" class="form-control lg-f" name="drinks">
+            <option value="" disabled selected hidden>Choose a country</option>
+            <option *ngFor="let count of myData">{{count.countryName}}</option>
+            
+          </select>
+        </div>
+
+
+
+
+
+        <button type="submit" class="lgn">Create Acc<span class="sp">o</span>unt</button>
+        <div class="member">
+          <span>already have an account?</span
+          ><a routerLink="/login">Login Here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

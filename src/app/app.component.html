@@ -1,0 +1,47 @@
+<div class="main">
+  <div class="inner">
+    <div class="left" [ngClass]="show1 ? 'withToggle' : ''">
+      <div
+        class="left-inner"
+        *ngIf="
+          router.url != '/login' &&
+          router.url != '/signup' &&
+          router.url != '/' &&
+          router.url != '/supadmindashboard' &&
+          router.url != '/forgotpassword' &&
+          router.url != '/newpassword' &&
+          router.url != '/supadminlogin' &&
+          router.url != '/supadmindash' &&
+          router.url != '/changepassword' &&
+          router.url != '/forgotpassword' &&
+          router.url != '/newpassword' &&
+          router.url != '/supadminlogin' &&
+          router.url != '/supadmindash' &&
+          router.url != '/thankyou'
+        "
+      >
+        <app-sidebar> </app-sidebar>
+      </div>
+      <div [ngClass]="class()"></div>
+    </div>
+    <div class="right">
+      <app-header
+        *ngIf="
+          router.url !== '/login' &&
+          router.url !== '/signup' &&
+          router.url !== '/' &&
+          router.url !== '/forgotpassword' &&
+          router.url !== '/newpassword' &&
+          router.url !== '/supadminlogin' &&
+          router.url != '/supadmindash' &&
+          router.url != '/changepassword' &&
+          router.url != '/thankyou'
+          
+        "
+      >
+      </app-header>
+      
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

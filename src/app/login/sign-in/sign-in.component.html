@@ -1,0 +1,173 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 side">
+      <div class="view">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="main1">
+                <div class="image">
+                  <img
+                    src="/../assets/images/first.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="text">
+                  <h3>Create your <span class="sp">Account</span></h3>
+                  <p>
+                    Establish an online presence for your brick
+                    <br />
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="main1">
+                <div class="image">
+                  <img
+                    src="/../assets/images/second.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="text">
+                  <h3>
+                    <span class="sp">stock</span> Exchange Data Analy<span
+                      class="sp"
+                      >sis</span
+                    >
+                  </h3>
+                  <p>
+                    Get access to more than 650,000 Stock exchange Data
+                  </p>
+                  <p><span class="sp">1,000+</span> verified Business.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="main1">
+                <div class="image">
+                  <img
+                    src="/../assets/images/third.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="text">
+                  <h3>
+                    real Data from <span class="sp">real</span> stocks
+                  </h3>
+                  <p>
+                    With St<span class="sp">O</span>S’ck Group Pricing feature,
+                    long term clients get the
+                  </p>
+                  <p>
+                    usu<span class="sp">al</span> price while new customers
+                    receive a different price.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <!-- <span class="visually-hidden">Previous</span> -->
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <!-- <span class="visually-hidden">Next</span> -->
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 cntr">
+      <form action="#"  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="f-w">
+          <div class="log">
+            <h4><span class="sp">STO</span>CK Analysis</h4>
+          </div>
+        </div>
+        <h1>wel<span class="sp">o</span>me back<span class="sp">!</span></h1>
+        <div class="para">
+          <p>
+            Please enter your email address and password below to access <span class="sp">Stock</span>Analysis
+            and its features.
+          </p>
+        </div>
+       
+        
+        <div class="mb-3">
+          <input type="text" formControlName="email" class="form-control lg-f" id="formGroupExampleInput"
+            placeholder="email" [ngClass]="{'is-invalid': isFormSubmited && errors['email'].errors}" />
+          <span style="color: red" class="help-block" *ngIf="(isFormSubmited && errors['email'].invalid) ||
+            errors['email'].touched || errors['email'].dirty">
+
+            <span *ngIf=" errors['email'].errors?.['required'] &&  !errors['email'].errors?.['pattern'] &&  !errors['email'].errors?.['minlength'] &&  !errors['email'].errors?.['maxlength']">
+              *Please enter your First Name
+            </span>
+
+            <span *ngIf="errors['email'].errors?.['maxlength'] && !errors['email'].errors?.['minlength'] &&  !errors['email'].errors?.['pattern']">
+              *maximum 30 characters allowed
+            </span>
+
+            <span *ngIf=" errors['email'].errors?.['email'] && !errors['email'].errors?.['maxlength'] && !errors['email'].errors?.['minlength']">
+              *enter valid email
+            </span>
+
+
+          </span>
+        </div>
+
+
+
+        <div class="mb-3 form-group">
+          <input minlength="8" maxlength="25" type="password" formControlName="password" class="form-control lg-f"
+            id="formGroupExampleInput" placeholder="Password"
+            [ngClass]="{'is-invalid': isFormSubmited && errors['password'].errors}" />
+          <span style="color: red" class="help-block" *ngIf="(isFormSubmited && errors['password'].invalid) ||
+            errors['password'].touched || errors['password'].dirty">
+
+            <span *ngIf=" errors['password'].errors?.['required'] &&  !errors['password'].errors?.['pattern'] &&  !errors['password'].errors?.['minlength'] &&  !errors['password'].errors?.['maxlength']  && !errors['password'].errors?.['noSpaceAllowed']">
+              *Please enter your password
+            </span>
+
+            <span *ngIf=" errors['password'].errors?.['noSpaceAllowed']">
+              *space not allowed
+            </span>
+
+            <span *ngIf="errors['password'].errors?.['maxlength'] && !errors['password'].errors?.['noSpaceAllowed'] && !errors['password'].errors?.['pattern']">
+              *maximum 25 characters allowed
+            </span>
+
+
+          </span>
+        </div>
+
+
+
+        <div class="mb-3">
+          <div class="sec">
+            <a routerLink="/forgotpassword"> forget password</a>
+          </div>
+        </div>
+        <button type="submit" class="lgn">Login</button>
+        <div class="member">
+          <span >Not a Member ?</span><a routerLink="/signup" class="tag">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

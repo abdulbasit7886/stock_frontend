@@ -1,0 +1,290 @@
+.l-navbar {
+  width: 266px;
+  /* height: 100vh; */
+  position: relative;
+  background-color: black;
+  z-index: 3;
+  transition: width 0.4s ease-in-out;
+}
+.hamburger {
+  width: 80px;
+  transition: width 0.4s ease;
+}
+.hamburger span,
+.hamburger .structured,
+.hamburger .dropdown-item,
+.hamburger .pos h4 {
+  visibility: hidden;
+}
+.hamburger .pos h4 {
+  margin: 0;
+}
+.left {
+  margin-left: 16px !important;
+}
+.another {
+  margin-left: 7px !important;
+}
+.sp {
+  visibility: visible !important;
+  margin: 0 !important;
+}
+
+.hamburger .gun li {
+  display: none;
+}
+.hamburger .board svg {
+  margin-left: 6px;
+}
+
+.pos h4 {
+  display: inline-block;
+  color: white;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-left: 45px;
+}
+
+.pos h4 span {
+  text-transform: capitalize;
+  background: linear-gradient(to right, #e6355c 50%, #ec7063 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav {
+  height: 100%;
+  background-color: black;
+  padding: 10px;
+  display: block;
+}
+.active1 {
+  color: white !important;
+  animation: impact 0.6s linear infinite !important;
+}
+.active3 {
+  color: white !important;
+  animation: impact 0.6s linear infinite;
+}
+.active4 {
+  color: white !important;
+  animation: impact 0.6s linear infinite;
+}
+.active5 {
+  color: white !important;
+  animation: impact 0.6s linear infinite;
+}
+.active6 {
+  color: white !important;
+  animation: impact 0.6s linear infinite;
+}
+.active7 {
+  color: white !important;
+  animation: impact 0.6s linear infinite;
+}
+.active8 {
+  color: white !important;
+  animation: impact 0.6s linear infinite;
+}
+.btn-arrow {
+  display: flex;
+  justify-content: flex-end;
+  width: 40px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  transform: translate(20px, -170%);
+  background: transparent;
+  border-radius: 6px;
+  position: absolute;
+  right: 0;
+}
+.svg {
+  opacity: 0.5;
+  width: 20px;
+  transition: color 0.3s linear;
+}
+.svg:hover {
+  color: #189eff;
+}
+.bg {
+  background: white;
+  outline: none;
+  box-shadow: 0px 0px 2px 1px white;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.fa-bars {
+  background-image: linear-gradient(to right, #12ce5d 0%, #189eff 100%);
+  font-size: 32px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.active2 {
+  color: white !important;
+}
+
+.gun li {
+  color: #646477 !important;
+  margin-left: 15px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.dropdown ul li {
+  list-style: disc;
+  margin-left: -6px;
+}
+.dropdown ul li a {
+}
+.new {
+  color: #9d9da6;
+  border: none;
+  text-transform: capitalize;
+  transition: color 0.85s !important;
+  font-size: 13px !important;
+  font-weight: 400;
+  font-family: Inter, Helvetica, "sans-serif";
+  letter-spacing: 0.4px;
+  margin: 4px 0 5px 0;
+}
+.new:hover {
+  color: white;
+}
+
+.dropdown-item {
+  background: transparent;
+  color: #9d9da6;
+  padding: 8px;
+  text-align: left;
+  margin-left: -3px;
+  /* width: 170px; */
+  transition: opacity 0.5s !important;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+}
+
+.dropdown-item:hover {
+  color: white;
+}
+
+a {
+  color: black;
+}
+
+.flex {
+  display: flex;
+}
+.menu {
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  border: none;
+  height: 0px !important;
+  position: static;
+  --bs-dropdown-padding-y: 0;
+  margin-bottom: 15px;
+  opacity: 0 !important;
+  transition: all 0.3s linear;
+}
+.nav_list {
+  margin-top: 10px;
+}
+.pos {
+  background-color: black;
+  padding: 20px 0;
+  border-bottom: 1px dashed #393945;
+  height: 72px;
+}
+.sp {
+  margin: 0 !important;
+}
+.new {
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown {
+  text-transform: capitalize;
+  transition: all 0.5s ease-in;
+  /* margin: 10px 0; */
+}
+
+.nav_link {
+  margin-bottom: 1.4rem;
+}
+
+.dropdown-menu.ok {
+  height: 72px;
+  opacity: 1;
+  transition: all 1s linear !important;
+}
+
+.menu.ok1,
+.menu.ok6,
+.menu.ok2,
+.menu.ok3,
+.menu.ok4,
+.menu.ok5,
+.menu.ok6,
+.menu.ok7,
+.menu.ok8 {
+  height: 55px !important;
+  opacity: 1 !important;
+  transition: all 0.3s linear !important;
+}
+.nav_list span {
+  font-weight: 500;
+}
+
+.board {
+  padding: 5px 3px;
+}
+
+.dropdown-toggle::after {
+  border: 0 !important;
+}
+
+.l-navbar span {
+  margin-left: 9px;
+}
+
+.structured {
+  position: absolute;
+  top: 11px;
+  right: 7px;
+}
+.board ul li a {
+  margin-left: 36px;
+}
+
+.height-less {
+  height: 0px !important;
+}
+.menu li {
+  list-style: none;
+}
+.svg2 {
+  transform: rotate(180deg);
+}
+
+.hamburger .fx,
+.fxx {
+  animation: impact 0.7s linear infinite;
+}
+
+@keyframes impact {
+  0% {
+    color: #9d9da6;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: #9d9da6;
+  }
+}
+
+@media (max-width: 992px) {
+  .l-navbar {
+    height: 130vh;
+  }
+}

@@ -1,0 +1,173 @@
+<div class="supplierlist-box">
+  <div class="top-right">
+    <div class="navbar-form navbar-left width" role="search">
+      <div class="forming">
+        <div class="serach-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <span><input type="search" class="sr" [(ngModel)]="Search" (change)="search()"
+            placeholder="Search"></span>
+      </div>
+    </div>
+    <div class="new-task">
+      <div class="filter">
+      <button class="sl1 f-btn"  (click)="sorting('active')">active</button>
+      <button class="sl2 f-btn" (click)="sorting('pending')">pending</button>
+      <button class="sl3 f-btn"  (click)="sorting('decline')">decline</button>
+      <button class="sl4 f-btn" (click)="getData()">Show All</button>
+      </div>
+    </div>
+  </div>
+  <div class="box-bottom">
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone No</th>
+          <th>Date</th>
+          <th>Company</th>
+          <th>Status</th>
+          <th>Action</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="
+        let data of users
+          | paginate
+            : {
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count
+              }
+          | filter: Search;
+        let i = index
+      ">
+          <td>{{data.firstName}}</td>
+          <td>{{data.lastName}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.phoneNumber}}</td>
+          <td>{{data.date }}</td>
+          <td>{{data.company}}</td>
+          <td>{{data.status}}</td>
+          <td><button class="active"   (click)="active(data._id)">active</button> <button class="decline" (click)="decline(data._id)">decline</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box-footer">
+    <div class="pagination">
+      <nav aria-label="Page navigation example">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- <header class="header" id="header">
+  <button class="bton">super<span>Admin</span></button>
+  <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+  <div class="top-right">
+
+    <div class="flex">
+     <h4>p<span>O</span>S</h4> 
+     
+
+      <div class="dropdown">
+
+        <button class="btn btn-secondary dropdown-toggle my-btn" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <div class="picture">
+            <img src="../../assets/images/pos_logo.png" alt="">
+          </div>
+     </button>
+        <ul class="dropdown-menu">
+          <div class="content">
+            <div class="picture">
+              <img src="../../assets/images/pos_logo.png" alt="">
+            </div>
+            <div class="text" *ngFor="let data of user">
+              <h3>seebiz group</h3>
+              <p>{{data.email}}</p>
+            </div>
+          </div>
+          <li><a class="dropdown-item" (click)="pass()"> <i class="fas fa-user-cog"></i> My Profile</a></li>
+             <li ><a (click)="logout()" style="margin-left: 18px;">  <i class="fas fa-power-off"></i> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+</header>
+
+<div class="supplierlist-box">
+
+
+  <div class="top-right">
+    <div class="new-task">
+      <details class="custom-select">
+        <summary class="radios">
+          <input type="radio" name="item" id="default" title="Select Status.." checked>
+          <input type="radio" name="item" id="item1" title="pending">
+          <input type="radio" name="item" id="item2" title="active">
+          <input type="radio" name="item" id="item3" title="decline">
+        </summary>
+        <ul class="list">
+          <label for="item1" (click)="sorting('pending')">
+            pending
+            <span></span>
+          </label>
+          <label for="item2" (click)="sorting('active')">active</label>
+          <label for="item3" (click)="sorting('decline')">decline</label>
+        </ul>
+      </details>
+      <button class="sl" (click)="getData()">Show All</button>
+    </div>
+
+
+    <div class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <div class="serach-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <span><input type="search" class="sr" [(ngModel)]="Search" (change)="search()"
+            placeholder="Search"></span>
+      </div>
+    </div>
+  </div>
+  <div class="box-bottom">
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>first name</th>
+          <th>last name</th>
+          <th>email</th>
+          <th>phone number</th>
+          <th>action</th>
+          <th>date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basit</td>
+          <td>Ali</td>
+          <td>basit@gmail.custom-select</td>
+          <td>+92-22334305</td>
+            <td><button class="active">active</button> <button class="decline">decline</button></td>
+            <td>8-26-2022</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box-footer">
+    <span style="font-size: 12px">showing 1 to 1 of 1 entries</span>
+    <div class="pagination">
+      <nav aria-label="Page navigation example">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+      </nav>
+    </div>
+  </div>
+</div> -->
