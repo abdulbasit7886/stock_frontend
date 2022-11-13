@@ -10,6 +10,9 @@
         <th scope="col">Name</th>
         <th scope="col">Low</th>
         <th scope="col">High</th>
+        <th scope="col">Open</th>
+        <th scope="col">Close</th>
+        <th scope="col">Volumn</th>
         <th scope="col">Date</th>
 
       </tr>
@@ -20,7 +23,11 @@
     <td>
 {{name}}
 </td>
-<td>{{i.Low}}</td>
-<td>{{i.High}}</td><td>{{i.Date}}</td></tr>
+<td style="color:red ;">{{i.Low}}</td>
+<td style="color:green ;">{{i.High}}</td>
+<td style="color:green ;">{{i.Open}}</td>
+<td style="color:red ;">{{i.Close}}</td>
+<td>{{i.Volume}}</td>
+<td>{{i.Date}}</td></tr>
     </tbody>
   </table>

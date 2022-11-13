@@ -1,12 +1,231 @@
-<div class="bgimg">
-    <div class="topleft">
-        <p>Welcom To</p>
+<div style="width: 1200px;">
+    <div class="marquee">
+    <div class="marquee-content"> 
+      <div class="marquee-item" *ngFor="let i of data">
+<h1>{{i.Name}}</h1>              </div>
+      
+
     </div>
-    <div class="middle">
-        <h1>Stock Analysis</h1>
-        <hr>
+  </div>
+</div>
+
+<div>
+
+<header class="py-5 bg-image-full" style="background-image: url('../../../../assets/images/stock.gif')">
+    <div class="text-center my-5">
+
+     <h1 class="text-white fs-3 fw-bolder" >Stock Market Analysis</h1>
+<br>
+     <div class="form-group">
+        <input
+        placeholder="   Search......"
+        aria-label="Example select with button addon"
+        autocomplete="off"
+        style="font-size: 15px;border-radius: 31px;    width: 400px;
+        height: 50px;"
+        matInput
+        [matAutocomplete]="auto"
+        
+        >
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of data | filter: term" [value]="option.Name" >
+            {{option.Name}}
+          </mat-option>
+        </mat-autocomplete>
+</div> 
+<br>
+<p class="text-white-50 mb-0" >The term stock market refers to several exchanges in which shares of publicly held companies are bought and sold. Such financial activities are conducted through formal exchanges and via over-the-counter (OTC) marketplaces that operate under a defined set of regulations</p>
     </div>
-    <div class="bottomleft">
-        <p>Data Solution</p>
+</header>
+<!-- Content section-->
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center" style="justify-content:center ;">
+            <div class="col-lg-6">
+                <h2>Tips for beginners</h2>
+                <p class="lead">1-Buy the right investment</p>
+                <p class="lead">2-Avoid individual stocks if you’re a beginner</p>
+                <p class="lead">3-Create a diversified portfolio</p>
+                <p class="lead">4-Be prepared for a downturn</p>
+                <p class="lead">5-Try a simulator before investing real money</p>
+                <p class="lead">6-Stay committed to your long-term portfolio</p>
+                <p class="lead">7-Start now</p>
+                <p class="lead">8-Avoid short-term trading</p>
+                <p class="lead">9-Keep investing over time</p>
+                <p class="mb-0">Buying the right stock is so much easier said than done. Anyone can see a stock that’s performed well in the past, but anticipating the performance of a stock in the future is much more difficult. If you want to succeed by investing in individual stocks, you have to be prepared to do a lot of work to analyze a company and manage the investment.</p>
+            </div>
+        </div>
     </div>
+</section>
+<!-- Image element - set the background image for the header in the line below-->
+<div class="py-5 bg-image-full" style="background-image: url(../../../../assets/images/bg1.jpg)">
+    <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+    <div style="height: 20rem"></div>
+</div>
+<!-- Content section-->
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>Stock market
+                </h2>
+                <p class="lead"> Stock market | Equity market | Share market</p>
+                <p class="mb-0">A stock market, equity market, or share market is the aggregation of buyers and sellers of stocks (also called shares), which represent ownership claims on businesses; these may include securities listed on a public stock exchange, as well as stock that is only traded privately, such as shares of private companies which are sold to investors through equity crowdfunding platforms. Investment is usually made with an investment strategy in mind.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>            Why trade in Online stock ?
+
+                </h2>
+                <p class="mb-0">            In general, the Online stock market is considered illiquid
+                    because the transactions are dispersed across multiple exchanges,
+                    which means that comparatively small trades can have huge impact
+                    on market prices. This means that your trades are more likely to
+                    be executed quickly and at a lower cost.</p>
+                    <p class="mb-0">          Online stock are what stocks were centuries ago; they are the
+                        new-age asset class growing at a pace never seen before. Having
+                        successfully surpassed almost all trading instruments in terms of
+                        returns, they are on their way to becoming the go-to asset class,
+                        with around 11 million Indians trading in Online currencies stock. Start
+                        your trading journey now!</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>             Why to use Online stock ?
+
+
+                </h2>
+                <p class="mb-0">            You can start trading in Online stock as low as RS-100 with
+                    , Buy, sell and trade 99+ Online currencies stock at the best
+                    market rates with zero fees in one click. We provide descriptions,
+                    real-time price and price changes with a history table, last
+                    one-year chart, news, and more about a specific Online currencies stock.</p>
+                    <p class="mb-0">            Everyone has security issues, but we're providing end-to-end
+                        encryption for your personal data and your transaction details.
+                        with TP-Coin you can Withdraw anytime you want instantly. We
+                        enable you to trade in Online currencies stock at the best price in
+                        India.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Stock Analysis
+            </h6>
+            <p>
+                A stock exchange is an exchange (or bourse)[note 1] where stockbrokers and traders can buy and sell shares (equity stock), bonds, and other securities. Many large companies have their stocks listed on a stock exchange.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    <!-- Section: Social media -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Products
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">FAQ</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">NEWS</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">STOCK</a>
+                </p>
+
+              </div>          
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Useful links
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Pricing</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Settings</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Help</a>
+                </p>
+              </div>          
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  info@example.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              </div>          
+        </div>
+      </div>
+    <!-- Section: Links  -->
+
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+    
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2022 Copyright:
+      <a class="text-reset fw-bold" href="">Aman Shiekh.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 </div>

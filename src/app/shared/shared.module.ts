@@ -11,6 +11,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -21,6 +25,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ConfirmationDeleteComponent,
     NotificationComponent,
     DashboardComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -30,6 +35,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatMenuModule,
     MatBadgeModule,
     MatToolbarModule,
+    MatAutocompleteModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    MatInputModule
+    
   ],
   exports: [
     HeaderComponent,

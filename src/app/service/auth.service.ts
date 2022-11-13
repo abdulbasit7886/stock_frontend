@@ -78,6 +78,9 @@ stockData(key:any) {
 stockDatainfo(key:any) {
   return this.http.get(`http://localhost:3000/api/stockdataid/${key}`,);
 }
+stockDatagraph(key:any) {
+  return this.http.get(`http://localhost:3000/api/stockdatagraph/${key}`,);
+}
 
 
 }
